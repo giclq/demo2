@@ -3,10 +3,7 @@ package com.example.demo.security;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/users")
@@ -27,5 +24,10 @@ public class UserController {
         applicationUserRepository.save(user);
         System.out.println("pwd:"+applicationUserRepository.findByUsername(user.getUsername()).getPassword());
 
+    }
+
+    @RequestMapping("/hello")
+    public String hello(){
+        return "hello";
     }
 }

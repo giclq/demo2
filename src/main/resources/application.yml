@@ -1,0 +1,19 @@
+server:
+  port: 9099
+  test: @huhu@
+
+spring:
+  rabbitmq:
+    host: 192.168.253.26
+    port: 5672
+    username: guest
+    password: guest
+#    listener:  # ���Ѷ�����
+#      simple:
+#        concurrency: 5
+#        max-concurrency: 10
+#        retry:
+#          enabled: true  #���ѿ�������
+#          max-attempts: 3
+#        acknowledge-mode: manual
+#    publisher-confirms: true
