@@ -17,3 +17,8 @@ spring:
 #          max-attempts: 3
 #        acknowledge-mode: manual
 #    publisher-confirms: true
+  elasticsearch:
+    jest:
+      uris:
+      - http://tx.tmfuli.com:9200
+      read-timeout: 5000
